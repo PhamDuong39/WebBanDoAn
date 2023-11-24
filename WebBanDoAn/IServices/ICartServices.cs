@@ -15,5 +15,8 @@ namespace WebBanDoAn.IServices
         Task<ResponseModel<bool>> RemoveCart(int productId);
         Task<ResponseModel<bool>> AddToCartFromLocal(IEnumerable<AddToCartFromLocalModel> allProductModels);
         Task<ResponseModel<bool>> RemoveAllCart();
+
+        // thanh toán cho User đã đăng nhập (có userId, đọc dữ liệu từ Cart + CartItem trong DB)
+        // thanh toán cho User chưa đăng nhập (không userId, đọc dữ liệu từ LocalStotage(IEnum<AddToCartFromLocalModel>))
     }
 }

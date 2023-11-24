@@ -41,6 +41,7 @@ builder.Services.AddIdentity<ApplicationUser, ApplicationRole>()
 builder.Services.AddScoped<IUserServices, UserServices>();
 builder.Services.AddScoped<IProductServices, ProductServices>();
 builder.Services.AddScoped<ICartServices, CartServices>();
+builder.Services.AddScoped<IPaymentServices, PaymentServices>();
 
 #endregion
 
